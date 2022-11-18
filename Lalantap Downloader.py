@@ -81,24 +81,6 @@ def downloader(url, file_name):
     title.config(text="Title")
     title2.config(text="Info")
 
-    # response = requests.get(url, file_name)
-    # content_length = response.headers.get("Content-Length")
-    # if os.path.exists(file_name):
-    #     resume_header = {'Range': 'bytes=%d-' % os.path.getsize(file_name)}
-    #     req2 = requests.get(url, headers=resume_header, stream=True)
-    #     with open(file_name, "ab") as f:
-    #         dl = 0
-    #         for data in req2.iter_content(chunk_size=1024):
-    #             dl += len(data)
-    #             f.write(data)
-    # else:
-    #     with open(file_name, "wb") as f:
-    #         dl = 0
-    #         for data in response.iter_content(chunk_size=1024):
-    #             dl += len(data)
-    #             f.write(data)
-
-
 def download_audio():
     for item in links:
         kvideo_id = video_id(item)
